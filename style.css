@@ -4,6 +4,24 @@ body, ul, li, h1, h2, a{
     font-family: arial;
 }
 
+nav{
+    padding: 1.4em;
+}
+
 nav ul{
     display: flex;
+    justify-content: space-around;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #1b1b1b;
+}
+nav a:hover{
+    color: #DB008B;
 }
