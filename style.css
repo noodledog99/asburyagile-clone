@@ -1,27 +1,277 @@
-body, ul, li, h1, h2, a{
+body,
+ul,
+li,
+h1,
+h2,
+a {
     margin: 0;
     padding: 0;
-    font-family: arial;
+    font-family: 'Roboto', sans-serif;
 }
 
-nav{
-    padding: 1.4em;
+.speaker-header h1,
+.workshop-header h1,
+.location-header h1,
+.sponsor-header h1,
+.learn-header h1,
+.newsletters h1
+{
+    font-family: 'Major Mono Display', monospace;
+    font-size: 3.5em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 34px;
 }
 
-nav ul{
+.speaker-header p,
+.workshop-header p,
+.location-header p,
+.sponsor-header p,
+.learn-header p{
+    font-size: 1.4em;
+    font-weight: 300;
+    text-align: center;
+    max-width: 960px;
+    margin-bottom: 25px;
+}
+
+.speaker-header,
+.workshop-header,
+.location-header,
+.sponsor-header,
+.learn-header {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+nav {
+    padding: 1.5em;
+}
+
+nav ul {
     display: flex;
     justify-content: space-around;
 }
 
-nav li{
+nav li {
     list-style-type: none;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     font-weight: bold;
     color: #1b1b1b;
 }
-nav a:hover{
+
+nav a:hover {
     color: #DB008B;
 }
+
+.main-container {
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+.banner {
+    background: #141414;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    margin-bottom: 50px;
+}
+
+.banner img {
+    max-width: 585px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.banner p {
+    max-width: 692px;
+    font-size: 1.4em;
+    line-height: 1.7em;
+    color: white;
+    text-align: center;
+}
+
+.banner button {
+    background-color: #DB008B;
+    border: none #DB008B;
+    border-style: outset;
+    border-radius: 7px;
+    font-size: 1.3em;
+    color: white;
+    padding: 20px 20px;
+    width: 700px;
+    margin: 15px 0;
+
+}
+
+.speakers,
+.workshops,
+.locations,
+.sponsors,
+.learns {
+    margin-bottom: 65px;
+}
+
+/* .speaker-main h1 {
+   
+} */
+
+/* .speaker-main p{
+    font-size: 1.4em;
+    font-weight: 300;
+    text-align: center;
+    max-width: 950px;
+    margin-bottom: 25px;
+} */
+
+.speaker-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.speaker-item  img {
+    width: 100%;
+}
+
+a {
+    color: #DB008B;
+}
+
+.speaker-item  h1 {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.speaker-item p {
+    padding: 0 25px;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+}
+
+.line {
+    border-bottom: solid #cccccc 1px;
+    margin-bottom: 120px;
+}
+
+.location-container,
+.workshop-container{
+    display: grid;
+    grid-gap: 20px;
+    max-width: 960px;
+    position: relative; /* ใส่ relative เพื่อให้จัดกลางได้*/
+    margin: 0 auto;
+}
+
+.workshop-container{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.location-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.location-item h1{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.location-item p{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.sponsor-item h4{
+    text-align: center;
+    margin-top: 110px;
+}
+
+.silver-sponsor,
+.platinum-sponsor,
+.community-sponsor,
+.media-sponsor{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.platinum-sponsor,
+.silver-sponsor{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.community-sponsor{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.media-sponsor{
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.platinum-sponsor img,
+.silver-sponsor img,
+.community-sponsor img,
+.media-sponsor img,
+.workshop-item img{
+    width: 100%;
+}
+
+.learn-container{
+    text-align: center;
+}
+
+.newsletters{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-top: solid #cccccc 1px;
+    background-color: #f7f7f7;
+    width: 100%;
+}
+
+.newsletters h1{
+    margin-top:100px;
+}
+
+.newsletters p{
+    text-align: center;
+    font-size: 1.3em;
+    max-width: 720px;
+}
+
+.newsletters button{
+    background-color: rgba(0,0,0,0.75);
+    border: none;
+    border-radius: 9px;
+    padding: 25px;
+    width: 700px;
+    font-size: 1.5em;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 65px;
+}
+
+footer{
+    font-size: 1em;
+    text-align: center;
+    line-height: 2em;
+    margin: 50px 0;
+}
+
