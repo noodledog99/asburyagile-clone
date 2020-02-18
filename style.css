@@ -3,10 +3,15 @@ ul,
 li,
 h1,
 h2,
-a {
+a,
+button {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #DB008B;
 }
 
 .speaker-header h1,
@@ -14,8 +19,7 @@ a {
 .location-header h1,
 .sponsor-header h1,
 .learn-header h1,
-.newsletters h1
-{
+.newsletters h1 {
     font-family: 'Major Mono Display', monospace;
     font-size: 3.5em;
     font-weight: 400;
@@ -27,7 +31,7 @@ a {
 .workshop-header p,
 .location-header p,
 .sponsor-header p,
-.learn-header p{
+.learn-header p {
     font-size: 1.4em;
     font-weight: 300;
     text-align: center;
@@ -45,6 +49,16 @@ a {
     align-items: center;
 }
 
+.bg-banner {
+    background: #1b1b1b url('/images/bg.png') no-repeat left top;
+    background-attachment: fixed;    
+}
+
+.bg-speaker{
+    background: url('/images/bg-pink.png') no-repeat left top;
+    background-attachment: fixed; 
+}
+
 nav {
     padding: 1.5em;
 }
@@ -52,6 +66,7 @@ nav {
 nav ul {
     display: flex;
     justify-content: space-around;
+    margin: 0 65px;
 }
 
 nav li {
@@ -59,8 +74,8 @@ nav li {
 }
 
 nav a {
+    font-weight: 400;
     text-decoration: none;
-    font-weight: bold;
     color: #1b1b1b;
 }
 
@@ -70,17 +85,16 @@ nav a:hover {
 
 .main-container {
     width: 100%;
-    max-width: 1900px;
     margin: 0 auto;
 }
 
 .banner {
-    background: #141414;
+    /* background: #141414; */
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 100%;
-    height: 700px;
+    max-width: 1900px;
+    height: 735px;
     margin-bottom: 50px;
 }
 
@@ -117,11 +131,8 @@ nav a:hover {
 .sponsors,
 .learns {
     margin-bottom: 65px;
+    padding: 0 25px;
 }
-
-/* .speaker-main h1 {
-   
-} */
 
 /* .speaker-main p{
     font-size: 1.4em;
@@ -140,15 +151,17 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.speaker-item  img {
+.speaker-item img {
     width: 100%;
 }
 
-a {
-    color: #DB008B;
+.speaker-item img:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
-.speaker-item  h1 {
+
+.speaker-item h1 {
     font-size: 1em;
     font-weight: bold;
     text-align: center;
@@ -167,35 +180,36 @@ a {
     margin-bottom: 120px;
 }
 
-.location-container,
-.workshop-container{
+.workshop-container,
+.location-container {
     display: grid;
     grid-gap: 20px;
     max-width: 960px;
-    position: relative; /* ใส่ relative เพื่อให้จัดกลางได้*/
+    position: relative;
+    /* ใส่ relative เพื่อให้จัดกลางได้*/
     margin: 0 auto;
 }
 
-.workshop-container{
+.workshop-container {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.location-container{
+.location-container {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.location-item h1{
+.location-item h1 {
     font-size: 1.1em;
     font-weight: bold;
     margin: 5px 0;
 }
 
-.location-item p{
+.location-item p {
     font-size: 1.2em;
     font-weight: 300;
 }
 
-.sponsor-item h4{
+.sponsor-item h4 {
     text-align: center;
     margin-top: 110px;
 }
@@ -203,7 +217,7 @@ a {
 .silver-sponsor,
 .platinum-sponsor,
 .community-sponsor,
-.media-sponsor{
+.media-sponsor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
@@ -213,15 +227,15 @@ a {
 }
 
 .platinum-sponsor,
-.silver-sponsor{
+.silver-sponsor {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.community-sponsor{
+.community-sponsor {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.media-sponsor{
+.media-sponsor {
     grid-template-columns: repeat(5, 1fr);
 }
 
@@ -229,15 +243,34 @@ a {
 .silver-sponsor img,
 .community-sponsor img,
 .media-sponsor img,
-.workshop-item img{
+.workshop-item img,
+.location-item img {
     width: 100%;
 }
 
-.learn-container{
-    text-align: center;
+.learn-container {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.newsletters{
+.learn-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.learn-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.newsletters {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -246,18 +279,18 @@ a {
     width: 100%;
 }
 
-.newsletters h1{
-    margin-top:100px;
+.newsletters h1 {
+    margin-top: 100px;
 }
 
-.newsletters p{
+.newsletters p {
     text-align: center;
     font-size: 1.3em;
     max-width: 720px;
 }
 
-.newsletters button{
-    background-color: rgba(0,0,0,0.75);
+.newsletters button {
+    background-color: rgba(0, 0, 0, 0.75);
     border: none;
     border-radius: 9px;
     padding: 25px;
@@ -268,10 +301,270 @@ a {
     margin-bottom: 65px;
 }
 
-footer{
+footer {
     font-size: 1em;
     text-align: center;
     line-height: 2em;
     margin: 50px 0;
 }
 
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-weight: 400;
+        text-decoration: none;
+        line-height: 36px;
+        color: #1b1b1b;
+    }
+
+    .workshop-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .workshop-item {
+        flex: 0 0 calc(36.6% - 20px);
+        padding: 5px 7px;
+    }
+
+    .workshop-item img {
+        width: 320px;
+        height: 223px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-weight: 400;
+        text-decoration: none;
+        line-height: 36px;
+        color: #1b1b1b;
+    }
+
+    .banner img {
+        width: 88%;
+    }
+
+    .banner p {
+        padding: 0 15px;
+    }
+
+    .banner button {
+        width: 90%;
+    }
+
+    .speaker-header p,
+    .workshop-header p,
+    .location-header p,
+    .sponsor-header p,
+    .learn-header p,
+    .newsletters p {
+        font-size: 0.99em;
+    }
+
+    .speaker-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 80px;
+    }
+
+    .speaker-item h1 {
+        padding-top: 15px;
+        margin: 0;
+    }
+
+    .speaker-item p {
+        padding-bottom: 20px;
+    }
+
+    .speaker-item img {
+        width: 100%;
+    }
+
+    .workshop-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .workshop-item {
+        flex: 0 0 calc(45.6% - 20px);
+        padding: 5px 7px;
+    }
+
+
+    .location-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location-item h1 {
+        margin-top: 20px;
+    }
+
+    .location-item p {
+        font-size: 1em;
+    }
+
+    .silver-sponsor,
+    .platinum-sponsor,
+    .community-sponsor,
+    .media-sponsor {
+        padding: 0 60px;
+    }
+
+    .silver-sponsor {
+        grid-template-columns: repeat(1, 1fr);
+        width: 45%;
+    }
+
+    .community-sponsor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .media-sponsor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletters button {
+        width: 90%;
+    }
+
+    .newsletters p {
+        padding: 0 25px;
+    }
+
+    footer {
+        font-size: 0.9em;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .speaker-header h1,
+    .workshop-header h1,
+    .location-header h1,
+    .sponsor-header h1,
+    .learn-header h1,
+    .newsletters h1 {
+        font-size: 3em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-weight: 400;
+        text-decoration: none;
+        line-height: 36px;
+        color: #1b1b1b;
+    }
+
+    .banner img {
+        width: 88%;
+    }
+
+    .banner p {
+        padding: 0 15px;
+    }
+
+    .banner button {
+        width: 90%;
+    }
+
+    .speaker-header p,
+    .workshop-header p,
+    .location-header p,
+    .sponsor-header p,
+    .learn-header p,
+    .newsletters p {
+        font-size: 0.99em;
+    }
+
+    .speaker-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 90px;
+    }
+
+    .speaker-item h1 {
+        padding-top: 15px;
+        margin: 0;
+    }
+
+    .speaker-item p {
+        padding-bottom: 20px;
+    }
+
+    .workshop-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .workshop-item {
+        padding: 5px 15px;
+    }
+
+    .workshop-item img {
+        width: 320px;
+        height: 223px;
+    }
+
+    .location-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location-item h1 {
+        margin-top: 20px;
+    }
+
+    .location-item p {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .silver-sponsor,
+    .platinum-sponsor,
+    .community-sponsor,
+    .media-sponsor {
+        padding: 0 75px;
+    }
+
+    .silver-sponsor {
+        grid-template-columns: repeat(1, 1fr);
+        width: 45%;
+    }
+
+    .community-sponsor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .media-sponsor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletters button {
+        width: 90%;
+    }
+
+
+    .line {
+        margin-bottom: 60px;
+    }
+}
