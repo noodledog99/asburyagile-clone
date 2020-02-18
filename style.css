@@ -459,7 +459,7 @@ footer {
     .sponsor-header h1,
     .learn-header h1,
     .newsletters h1 {
-        font-size: 3em;
+        font-size: 2.8em;
     }
 
     nav ul {
@@ -498,7 +498,7 @@ footer {
     .speaker-container {
         display: flex;
         flex-direction: column;
-        padding: 0 90px;
+        padding: 0 55px;
     }
 
     .speaker-item h1 {
